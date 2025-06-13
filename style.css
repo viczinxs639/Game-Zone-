@@ -181,3 +181,18 @@ button:hover {
   text-decoration: underline;
 }
 
+.btn-jogos {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #ffaa00;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn-jogos:hover {
+  background-color: #ff8c00;
+}
