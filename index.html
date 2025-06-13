@@ -27,3 +27,32 @@
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Zone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 Game Zone</h1>
+    <p>Escolha um jogo para começar</p>
+
+    <select id="jogoSelecionado">
+      <option value="jogo-da-velha.html">Jogo da Velha</option>
+      <option value="quiz.html">Quiz</option>
+      <option value="memoria.html">Jogo da Memória</option>
+    </select>
+
+    <button onclick="entrarNoJogo()">Entrar</button>
+  </div>
+
+  <script>
+    function entrarNoJogo() {
+      const jogo = document.getElementById('jogoSelecionado').value;
+      window.location.href = jogo;
+    }
+  </script>
+</body>
+</html>
