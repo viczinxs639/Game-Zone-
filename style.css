@@ -1,69 +1,96 @@
-body {
-  font-family: Arial;
-  text-align: center;
-  margin-top: 50px;
+/* Fonte retrô para título */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
 }
-.board {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  gap: 5px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-.cell {
-  width: 100px;
-  height: 100px;
-  font-size: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #333;
-  cursor: pointer;
-}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #1d2b64, #f8cdda);
-  color: white;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-.container {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  overflow: hidden;
 }
 
 h1 {
-  font-size: 3em;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #00ffc8;
+  text-shadow: 2px 2px #000;
+}
+
+.subtitle {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border: 4px dashed #00ffc8;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00ffc8;
+  animation: pulse 5s infinite;
+  max-width: 400px;
+  width: 90%;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 15px #00ffc8; }
+  50% { box-shadow: 0 0 25px #00ffc8; }
+  100% { box-shadow: 0 0 15px #00ffc8; }
+}
+
+.game-selector {
   margin-bottom: 20px;
 }
 
 select {
   padding: 10px;
   font-size: 1em;
-  margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: none;
+  margin-top: 10px;
+  background-color: #222;
+  color: #00ffc8;
+  outline: none;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 1.1em;
+  padding: 12px 25px;
+  font-size: 1em;
   border: none;
-  border-radius: 5px;
-  background-color: #00c3ff;
-  color: white;
+  border-radius: 8px;
+  background-color: #00ffc8;
+  color: #000;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #008abf;
+  transform: scale(1.05);
+  background-color: #00bfa5;
+}
+
+.decor-top, .decor-bottom {
+  font-size: 1.2em;
+  margin: 20px;
+  color: #ffd700;
+  animation: float 4s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(10px); }
 }
