@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal de Jogos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🎮 Portal de Jogos</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Jogos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="jogos">
+      <div class="jogo" onclick="abrirDetalhes('Jogo da Cobrinha')">
+        <img src="snake.jpg" alt="Jogo da Cobrinha">
+        <h3>Jogo da Cobrinha</h3>
+      </div>
+
+      <div class="jogo" onclick="abrirDetalhes('Tetris Clássico')">
+        <img src="tetris.jpg" alt="Tetris Clássico">
+        <h3>Tetris Clássico</h3>
+      </div>
+
+      <div class="jogo" onclick="abrirDetalhes('Pong')">
+        <img src="pong.jpg" alt="Pong">
+        <h3>Pong</h3>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portal de Jogos</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
