@@ -70,4 +70,3 @@ function draw() {
 }
 
 let game = setInterval(draw, 150);
-
